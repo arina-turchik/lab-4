@@ -32,4 +32,17 @@ secret_message = [
 #   4е и 5е слова нужно получить за 1 срез
 #   Если нужны вычисления и разные пробы - делайте это в консоли пайтона, тут нужен только результат
 
-# TODO вывести расшифрованное сообщение
+# Расшифровка сообщения
+first_word = secret_message[0][3]  # 4-я буква
+second_word = secret_message[1][9:13]  # буквы с 10 по 13
+third_word = secret_message[2][5:15:2]  # буквы с 6 по 15 через одну
+fourth_word = secret_message[3][7:13][::-1]  # буквы с 8 по 13 в обратном порядке
+fifth_word = secret_message[4][16:21][::-1]  # буквы с 17 по 21 в обратном порядке
+
+# Формирование расшифрованного сообщения
+decoded_message = f"{first_word} {second_word} {third_word} {fourth_word} {fifth_word}"
+
+# Вывод расшифрованного сообщения
+print(decoded_message)
+
+
